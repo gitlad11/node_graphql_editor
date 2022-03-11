@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Button from './button';
 
 function NavBar(props){
 
@@ -9,7 +9,9 @@ function NavBar(props){
                     <h2 className="title">
                         Редактор
                     </h2>
-                    <div></div>
+                    <div style={{ width : '160px', display : 'flex', justifyContent : 'flex-end' }} >
+                        <Button icon={'/images/save-white.svg'} color={'#52d443'} label={"создать"} />               
+                    </div>
             </div>
     )
 }

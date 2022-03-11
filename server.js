@@ -27,8 +27,13 @@ app.get('/api', (req, res) => {
 app.get('/api/files', async (req, res) => {
     console.log('requests')
     var data = await get_files()
-    console.log(data)
+
     res.status(200).json(data)
+})
+
+app.post('/api/files/delete', async(req, res) => {
+    remove_file(req.name)
+    res.status(200).json(req.name)
 })
 
 app.listen(PORT, console.log(`server is running on ${PORT}`))
